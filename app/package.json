@@ -1,0 +1,18 @@
+{
+  "name": "nova-ascent",
+  "productName": "ROCKET ASCENT - Rocket Works",
+  "version": "1.3.0",
+  "description": "Offline desktop build of the ROCKET ASCENT rocket game. Loads entirely from disk - no network required.",
+  "main": "main.js",
+  "author": "Rocket Ascent",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "shot": "NOVA_SHOT=1 electron .",
+    "dist:win": "npx @electron/packager@19 . \"Rocket Ascent\" --platform=win32 --arch=x64 --asar --overwrite --prune --out=dist-win --ignore=\"^/dist-win\" --electron-version=31.7.7 --icon=assets/icon.ico --win32metadata.ProductName=\"Rocket Ascent\" --win32metadata.FileDescription=\"Rocket Ascent - Rocket Works arcade game\" --win32metadata.OriginalFilename=\"Rocket Ascent.exe\""
+  },
+  "devDependencies": {
+    "electron": "^31.3.0"
+  }
+}
