@@ -6,6 +6,11 @@ A single-file, offline rocket-building arcade game. Buy parts, bolt on boosters,
 launch, steer past enemies and bosses, and climb a **100-level campaign** from the
 pad to the Void Tyrant.
 
+**Play it now (no install):**
+[https://arhamahmedworkspace.github.io/Rocket-Accent/](https://arhamahmedworkspace.github.io/Rocket-Accent/) — PC ·
+[https://arhamahmedworkspace.github.io/Rocket-Accent/mobile.html](https://arhamahmedworkspace.github.io/Rocket-Accent/mobile.html) — mobile
+(phones are redirected to the touch edition automatically)
+
 Two editions ship from the same source:
 
 | File | For | Controls |
