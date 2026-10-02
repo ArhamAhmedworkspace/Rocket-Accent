@@ -17,3 +17,6 @@ Thumbs.db
 downloads/
 *.apk
 *.idsig
+
+# kept as docs/github-pages-workflow.yml (Actions files need a token with the `workflow` scope)
+.github/
