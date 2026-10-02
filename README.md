@@ -1,8 +1,15 @@
 # 🚀 ROCKET ASCENT — Rocket Works
 
+> A rocket work game for mobile and PC — one repo, two editions.
+
 A single-file, offline rocket-building arcade game. Buy parts, bolt on boosters,
 launch, steer past enemies and bosses, and climb a **100-level campaign** from the
 pad to the Void Tyrant.
+
+**Play it now (no install):**
+[https://arhamahmedworkspace.github.io/Rocket-Accent/](https://arhamahmedworkspace.github.io/Rocket-Accent/) — PC ·
+[https://arhamahmedworkspace.github.io/Rocket-Accent/mobile.html](https://arhamahmedworkspace.github.io/Rocket-Accent/mobile.html) — mobile
+(phones are redirected to the touch edition automatically)
 
 Two editions ship from the same source:
 
@@ -15,6 +22,20 @@ Open either file in a browser — no install, no network, no build step.
 On the web, phones are routed to `mobile.html` automatically.
 
 ---
+
+## 📥 Downloads (installable builds)
+
+| Platform | File | Size | Notes |
+|---|---|---|---|
+| **Android** | `Rocket-Ascent-v1.0.0.apk` | 90 KB | Real installable app. Android 7.0+ (API 24), target SDK 34, forces landscape, immersive fullscreen, screen stays awake, saves to `localStorage`. Signed with the project key. |
+| **Windows** | `Rocket-Ascent-Windows-x64-v1.0.0.zip` | 97 MB | Offline desktop app. Unzip the folder and run **Rocket Ascent.exe** — no install, no internet. |
+
+Both live on the **[latest release](https://github.com/ArhamAhmedworkspace/Rocket-Accent/releases/latest)**.
+On Android, the first install asks you to allow installs from unknown sources — that is normal for
+a self-signed APK (SHA-256 `5b5b1f72…`).
+
+Rebuild the APK any time with `bash tools/build-apk.sh` (see `tools/apk-env.sh` to recreate the
+Android toolchain).
 
 ## 🎮 Controls
 

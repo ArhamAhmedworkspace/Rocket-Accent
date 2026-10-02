@@ -12,3 +12,8 @@ dist-win/
 *.log
 .DS_Store
 Thumbs.db
+
+# release build outputs (uploaded to GitHub Releases, not committed)
+dist/
+*.apk
+*.idsig

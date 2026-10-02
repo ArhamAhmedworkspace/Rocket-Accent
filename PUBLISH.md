@@ -1,59 +1,70 @@
-# 📦 Publishing to GitHub (2 minutes)
+# 📦 Publish to https://github.com/ArhamAhmedworkspace/Rocket-Accent
 
-The repository here is already prepared and committed locally — `README.md`,
-`LICENSE` (MIT), `.gitignore`, the Pages workflow and both game builds are in place.
-Git is initialised and everything is committed on `main`.
-
-I can't push for you: pushing needs **your** GitHub login, and I have no credentials
-or browser session here. Run these three commands and it's live.
-
-## 1 — Create the repo on GitHub
-
-Go to **https://github.com/new**
-
-- Repository name: `rocket-ascent` (or anything you like)
-- Visibility: **Public**
-- **Leave every checkbox unticked** (no README, no .gitignore, no license — they're already here)
-
-Click **Create repository**. GitHub then shows a URL like:
+The repo on GitHub is **public** and currently holds only GitHub's auto-generated
+`README.md`. Everything below is already built, committed locally on branch `main`,
+and waiting to go up:
 
 ```
-https://github.com/YOUR-USERNAME/rocket-ascent.git
+index.html      PC edition        230 KB   keyboard + mouse
+mobile.html     MOBILE edition    241 KB   joystick, swipe throttle, touch buttons
+src/            shared sources both editions build from
+app/            Electron shell (offline desktop build)
+.github/        Pages workflow      docs/  screenshots
+README.md  LICENSE (MIT)  .gitignore  build.sh
 ```
 
-## 2 — Push from this workspace
+---
+
+## ⚡ Fastest: paste a token, I push it (≈10 seconds)
+
+GitHub stopped accepting account passwords for git — it needs a **token**.
+
+1. Open **https://github.com/settings/tokens**
+2. **Generate new token → Generate new token (classic)**
+3. Note: `rocket-ascent`, tick **`repo`**, Generate
+4. **Copy it** and paste it in the chat
+
+I push everything (including the Pages setup) the moment it arrives. The token is
+used once for that push and never written to any file.
+
+If you'd rather run it yourself:
 
 ```bash
 cd /home/user/nova-ascent
-git remote add origin https://github.com/YOUR-USERNAME/rocket-ascent.git
-git branch -M main
+git remote add origin https://ArhamAhmedworkspace:YOUR_TOKEN@github.com/ArhamAhmedworkspace/Rocket-Accent.git
 git push -u origin main
 ```
 
-If GitHub asks for a password, use a **Personal Access Token**
-(GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic),
-tick `repo`), not your account password.
+---
 
-## 3 — Turn on GitHub Pages (optional, plays in the browser)
+## 🖐️ No token: upload by hand (≈2 minutes, no credentials at all)
 
-Repo → **Settings** → **Pages** → Source: **GitHub Actions**.
-The workflow in `.github/workflows/pages.yml` rebuilds both editions on every push and
-publishes them at:
+1. Download **`rocket-ascent-lean.zip`** (1.1 MB, 27 files — everything that matters,
+   incl. 4 screenshots) or **`rocket-ascent-upload.zip`** (12 MB, 98 files — adds the
+   full `docs/` gallery).
+2. Extract it on your computer and open the extracted folder.
+3. On GitHub, open **ArhamAhmedworkspace/Rocket-Accent → Add file → Upload files**
+4. Drag **all** the extracted files and folders in (`src`, `.github`, `app`, `docs`,
+   `index.html`, `mobile.html`, `README.md`, `LICENSE`, `.gitignore`, `build.sh`).
+   GitHub keeps the folder structure and lets you rename/move `README.md` over theirs
+   on the commit screen.
+5. Commit directly to `main`.
+
+---
+
+## 🌐 GitHub Pages (play straight in the browser)
+
+Repo → **Settings → Pages → Source: GitHub Actions**.
+`.github/workflows/pages.yml` rebuilds both editions on every push and publishes:
 
 ```
-https://YOUR-USERNAME.github.io/rocket-ascent/          ← PC edition
-https://YOUR-USERNAME.github.io/rocket-ascent/mobile.html   ← touch edition
+https://arhamahmedworkspace.github.io/Rocket-Accent/           ← PC edition
+https://arhamahmedworkspace.github.io/Rocket-Accent/mobile.html ← touch edition
 ```
 
 Phones that open the root URL are bounced to the touch edition automatically.
 
-## What gets uploaded
+## 🪟 Windows build
 
-- `index.html` — PC edition (230 KB, single file)
-- `mobile.html` — mobile edition (241 KB, single file)
-- `src/` — the modular sources both editions are built from
-- `app/` — Electron shell for the offline desktop build
-- `docs/` — screenshots
-- Not uploaded: the 97 MB Windows zip and `node_modules` (see `.gitignore`).
-  Attach the zip to a **Release** instead: Repo → Releases → Create a new release →
-  drag `Rocket-Ascent-Windows-x64.zip` in.
+`Rocket-Ascent-Windows-x64.zip` (97 MB) is git-ignored — too big for a commit.
+Attach it to a **Release** instead: Releases → Create a new release → drag the zip in.
