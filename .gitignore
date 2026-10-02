@@ -14,6 +14,6 @@ dist-win/
 Thumbs.db
 
 # release build outputs (uploaded to GitHub Releases, not committed)
-dist/
+downloads/
 *.apk
 *.idsig
