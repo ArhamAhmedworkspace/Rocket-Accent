@@ -1,5 +1,7 @@
 # 🚀 ROCKET ASCENT — Rocket Works
 
+> A rocket work game for mobile and PC — one repo, two editions.
+
 A single-file, offline rocket-building arcade game. Buy parts, bolt on boosters,
 launch, steer past enemies and bosses, and climb a **100-level campaign** from the
 pad to the Void Tyrant.
